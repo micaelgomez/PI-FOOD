@@ -1,0 +1,116 @@
+/* .btn1 {
+    font-family: "Zen Antique", serif;
+  display: inline-block;
+  color: white;
+  border: 1px solid #ccc;
+  background: black;
+  box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  max-width: 150px;
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+} */
+
+.nav {
+  background: rgb(0, 0, 1);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 1, 1) 54%,
+    rgba(12, 15, 17, 1) 56%,
+    rgba(13, 14, 17, 1) 75%
+  );
+  display: flex;
+
+  justify-content: space-around;
+  padding: 8px;
+}
+
+.nav span {
+  font-family: "Zen Antique", serif;
+  display: inline-block;
+  color: white;
+  border: 1px solid #ccc;
+  background: black;
+  box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  max-width: 150px;
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: small;
+}
+
+.nav span:hover {
+  color: black;
+  background-color: whitesmoke;
+
+  /* -webkit-transition: all 0.5s ease-in-out; */
+  transition: all 0.5s ease-in-out;
+}
+
+nav button {
+  font-family: "Zen Antique", serif;
+  display: inline-block;
+  color: white;
+  border: 1px solid #ccc;
+  background: black;
+  box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  max-width: 135px;
+  padding: 10px;
+
+  text-align: center;
+  vertical-align: middle;
+  font-size: small;
+}
+
+.nav button:hover {
+  color: black;
+  background-color: whitesmoke;
+
+  /* -webkit-transition: all 0.5s ease-in-out; */
+  transition: all 0.5s ease-in-out;
+}
+
+#send {
+  margin-left: 5px;
+}
+
+.titulos span {
+  font-family: "Zen Antique", serif;
+  display: inline-block;
+  color: white;
+  border: 1px solid #ccc;
+  background: black;
+  box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  max-width: 150px;
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.titulos span:hover {
+  color: black;
+  background-color: whitesmoke;
+
+  /* -webkit-transition: all 0.5s ease-in-out; */
+  transition: all 0.5s ease-in-out;
+}
+
+.titulos h1 {
+  font-family: "Zen Antique", serif;
+  font-size: 60px;
+  color: white;
+  margin-bottom: 150px;
+  margin-top: 150px;
+  text-align: center;
+}
+
+.nav input {
+  background-color: black;
+  border-color: white;
+  border-radius: 10px;
+  color: white;
+}

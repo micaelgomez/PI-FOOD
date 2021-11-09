@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap");
+
+.principal {
+  background-image: url(../../img/lidye-1Shk_PkNkNw-unsplash\ \(3\).jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.title {
+  color: white;
+  margin-top: 150px;
+  text-align-last: left;
+  margin-left: 50px;
+  position: absolute;
+}
+.title h1 {
+  font-family: "Zen Antique", serif;
+  font-size: 60px;
+}
+
+.btn {
+  font-family: "Zen Antique", serif;
+  display: inline-block;
+  color: white;
+  border: 1px solid #ccc;
+  background: black;
+  box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  vertical-align: middle;
+  max-width: 150px;
+  padding: 10px;
+  text-align: center;
+}
+
+.btn:hover {
+  color: black;
+  background-color: whitesmoke;
+
+  /* -webkit-transition: all 0.5s ease-in-out; */
+  transition: all 0.5s ease-in-out;
+}

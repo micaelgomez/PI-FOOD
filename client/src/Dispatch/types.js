@@ -1,0 +1,8 @@
+export const GET_ALL_RECIPES = "GET_ALL_RECIPES";
+export const GET_DIETS = "GET_DIETS";
+export const ORDER_SCORE = "ORDER_SCORE";
+export const ORDER_DIETS = "ORDER_DIETS";
+export const ORDER_BY_NAME = "ORDER_BY_NAME";
+export const GET_RECIPES_BY_NAME = "GET_RECIPES_BY_NAME";
+export const POST_RECIPES = "POST_RECIPES";
+export const GET_RECIPE_DETAIL = "GET_RECIPE_DETAIL";

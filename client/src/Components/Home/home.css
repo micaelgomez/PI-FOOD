@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap");
+
+.foto {
+  background-image: url(../../img/olla.jpg);
+  background-repeat: repeat-y;
+  background-color: black;
+  background-position: right;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

@@ -1,0 +1,77 @@
+.detail-background {
+  background-image: url(./../../img/fondo\ detail\ 2.jpg);
+}
+@import url("https://fonts.googleapis.com/css2?family=Uchen&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap");
+
+.borde {
+  /* border: 1px solid red;
+  width: 500px;
+  height: 500px;
+  padding: 15px;
+
+  text-align: center;
+  font-size: small;
+  display: flex;
+  justify-content: center; */
+  background-color: #e6e1e15d;
+  backdrop-filter: blur(6px);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: 5px solid black;
+  width: 60%;
+  height: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.detalle {
+  font-family: "Uchen", serif;
+  color: white;
+}
+
+.detalle h2 {
+  font-size: 50px;
+  color: whitesmoke;
+}
+.detalle h3 {
+  font-size: 25px;
+  color: white;
+}
+
+.detalle h4 {
+  font-size: 25px;
+}
+.detalle h5 {
+  font-size: 18px;
+  text-align: left;
+  padding-left: 10px;
+}
+.detalle img {
+  height: 350px;
+  width: 450px;
+  border-radius: 15px;
+  border: 3px solid red;
+}
+
+.detalle img:hover {
+  border: 10px solid red;
+}
+
+.steps {
+  padding-bottom: 20px;
+  font-size: 25px;
+  font-family: "Uchen", serif;
+  text-align: left;
+  padding-left: 10px;
+  color: white;
+}
+
+.detalle:hover {
+  color: white;
+}
+.borde:hover {
+  background-color: rgba(0, 0, 0, 0.253);
+}

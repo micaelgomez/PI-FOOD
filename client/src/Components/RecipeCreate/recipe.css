@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap");
+.principal-on {
+  background-image: url("../../img/pasta.jpg");
+  background-repeat: no-repeat;
+  background-position-x: right;
+}
+
+.home {
+  display: flex;
+  margin: 30px;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-family: "Zen Antique", serif;
+  font-size: 60px;
+}
+
+.form-register {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+label {
+  margin: 5px;
+  font-family: "Zen Antique", serif;
+  color: black;
+  border-radius: 20px;
+}
+
+input {
+  border-radius: 10px;
+  margin-right: 5px;
+}
+
+textarea {
+  max-width: 400px;
+  border-radius: 5px;
+  min-width: 200px;
+  border: 2px solid black;
+}
+
+.diets {
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+}
+
+p {
+  display: inline-block;
+  color: red;
+  margin-right: 5px;
+}

@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+
+.card {
+  margin-left: 20px;
+  margin-top: 25px;
+  width: 310px;
+  background-color: #e6e1e15d;
+  backdrop-filter: blur(6px);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: 1px solid black;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+.card:hover {
+  background: rgb(255, 79, 5);
+  background: linear-gradient(
+    63deg,
+    rgba(255, 79, 5, 1) 4%,
+    rgba(254, 85, 7, 1) 9%,
+    rgba(241, 183, 33, 1) 86%,
+    rgba(116, 105, 100, 1) 98%
+  );
+  cursor: pointer;
+}

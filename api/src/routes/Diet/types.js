@@ -8,12 +8,12 @@ const { preload } = require("./store");
 //          En una primera instancia, cuando no exista ninguno,
 //          deberán precargar la base de datos con los tipos de datos indicados por spoonacular
 
-router.get("/", async (req, res, next) => {
+router.get("/", async (req, res) => {
   try {
     const types = await preload();
     res.status(200).send(types);
   } catch (error) {
-    error.next;
+    throw new Error(error);
   }
 });
 

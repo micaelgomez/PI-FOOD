@@ -1,4 +1,5 @@
 import "./recipe.css";
+import Footer from "../Footer/footer";
 
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -36,6 +37,7 @@ export default function RecipeCreate() {
     health: 0,
     steps: "",
     dietName: [],
+    dietString: "",
   };
 
   //Estado
@@ -85,6 +87,7 @@ export default function RecipeCreate() {
   //submmit
   async function handleSubmit(e) {
     e.preventDefault();
+    input.dietString = input.dietName.join(", ");
     const flag = await postNewRecipe(input);
     setInput(obj);
 
@@ -184,6 +187,10 @@ export default function RecipeCreate() {
               );
             })}
         </form>
+      </div>
+
+      <div>
+        <Footer />
       </div>
     </div>
   );

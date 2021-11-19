@@ -1,9 +1,10 @@
 import "./detail.css";
+import Footer from "../Footer/footer";
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
-import { getRecipeDetail } from "../../Dispatch/action";
+import { getAllRecipes, getRecipeDetail } from "../../Dispatch/action";
 import { useDispatch, useSelector } from "react-redux";
 
 export default function Detail() {
@@ -18,10 +19,9 @@ export default function Detail() {
   //mount o did update -->db-->le paso id-->Seteo la respuesta en my estado React
   useEffect(() => {
     dispatch(getRecipeDetail(id));
-
     //clean up
     // dispatch(getRecipeDetail(null));
-  }, [dispatch]);
+  }, [dispatch, id]);
 
   //   [ ok] Los campos mostrados en la ruta principal para cada receta (imagen , nombre , tipo de plato  y tipo de dieta ok)
   //   - [ ] Resumen del plato
@@ -35,7 +35,6 @@ export default function Detail() {
   // console.log(steps1);
 
   const diets = detail[0] ? detail[0].diets : detail.diets;
-  console.log(diets);
 
   return (
     <div className="detail-background">
@@ -48,20 +47,35 @@ export default function Detail() {
       <div className="borde">
         {detail && (
           <div>
+            <div className="home">
+              <Link to="/home">
+                <button className="btn">X </button>
+              </Link>
+            </div>
+
             <div className="detalle">
               <h2> {detail[0] ? detail[0].name : detail.name}</h2>
-              <img src={detail[0]?.image} />
+              <img src={detail[0]?.image} alt="Recipe img" />
+
               <h3>
                 Dish Types:{" "}
                 {detail[0] ? detail[0]?.dishTypes : "Without dish types"}
               </h3>
+
               <h4>
                 Diets: {detail[0]?.diets}
-                {diets && diets.map((diet) => <li key = {diet.id}> {diet.name} </li>)}
+                {diets &&
+                  diets.map((diet) => <li key={diet.id}> {diet.name} </li>)}
               </h4>
-              <h5>
-                Summary: {detail[0] ? detail[0]?.summary : detail.summary}
+              <h5 dangerouslySetInnerHTML={{ __html: detail[0]?.summary }}>
+                {/* Summary: {detail[0] ? detail[0]?.summary : detail.summary} */}
               </h5>
+
+              <div>
+                <h3>Summary:</h3>
+                <h5 dangerouslySetInnerHTML={{ __html: detail[0]?.summary }} />
+              </div>
+
               <h4>Score: {detail[0] ? detail[0]?.score : detail.score}</h4>
               <h4>health: {detail[0] ? detail[0]?.health : detail.health}</h4>
             </div>
@@ -76,6 +90,9 @@ export default function Detail() {
             </div>
           </div>
         )}
+      </div>
+      <div>
+        <Footer />
       </div>
     </div>
   );

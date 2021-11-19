@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, } from "react-router-dom"; //Permite el routeo
+import { BrowserRouter, } from "react-router-dom";
 import "./index.css";
-import App from "./App"; //pag principal
+import App from "./App"; 
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux"; //Para que funcione redux
 import store from "./Store"

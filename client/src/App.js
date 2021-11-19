@@ -3,17 +3,18 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Landing from "./Components/Landing/landing";
 import Home from "./Components/Home/home";
 import RecipeCreate from "./Components/RecipeCreate/recipeCreate";
-import Detail from "./Components/Details/details";
+import Details from "./Components/Details/details";
+import Footer from "./Components/Footer/footer";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
         <Switch>
-          <Route exact path="/home/:id" component={Detail} />
+          <Route exact path="/home/:id" component={Details} />
           <Route exact path="/" component={Landing} />
           <Route exact path="/recipes" component={RecipeCreate} />
-          <Route exactpath="/home" component={Home} />
+          <Route exact path="/home" component={Home} />
         </Switch>
       </div>
     </BrowserRouter>

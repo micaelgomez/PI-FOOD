@@ -2,9 +2,6 @@ import "./landing.css";
 import React from "react";
 import { Link } from "react-router-dom";
 
-// [ ] Alguna imagen de fondo representativa al proyecto
-// [x] Botón para ingresar al home (Ruta principal)
-
 export default function Landing() {
   return (
     <div className="principal">

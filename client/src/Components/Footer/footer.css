@@ -1,0 +1,71 @@
+/* .bottomPrimary {
+  height: 100px;
+  margin-top: 10px;
+  justify-content: center;
+  background-color: #77777770;
+  backdrop-filter: blur(30px);
+  text-align: -webkit-center;
+}
+.social {
+  padding: 30px;
+}
+.bottomPrimary a {
+  text-decoration: none;
+  color: rgb(204, 201, 201);
+  font-size: small;
+  margin-right: 20px;
+}
+.iconBottom {
+  height: 1.5em;
+  width: 1.5em;
+  text-decoration: none;
+  color: rgb(204, 201, 201);
+  transition: 0.5s;
+}
+.iconBottom:hover {
+  height: 1.5em;
+  width: 1.5em;
+  text-decoration: none;
+  color: white;
+  transform: translateY(-5px);
+}
+.item:hover,
+.copyr:hover {
+  color: white;
+}
+
+.copyr {
+  font-size: 10px;
+  padding-top: 10px;
+  color: rgb(204, 201, 201);
+  
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap");
+
+.bottom {
+  padding-top: 20px;
+}
+
+.bottom-inside {
+  border: 1px solid black;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: white;
+}
+
+.bottom-inside-inside {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: "Zen Antique", serif;
+  font-size: 25px;
+  color: white;
+  background-color: black;
+}
+
+.iconBottom {
+  border: 1px solid rgb(126, 121, 121);
+  width: 50px;
+  padding-right: 10px;
+  align-self: center;
+}

@@ -1,4 +1,4 @@
-import axios from "axios"; //-->llamadas async
+import axios from "axios";
 import {
   GET_ALL_RECIPES,
   ORDER_SCORE,
@@ -9,16 +9,59 @@ import {
   GET_RECIPE_DETAIL,
 } from "./types";
 
-//Todas las recetas
 export function getAllRecipes() {
-  return async function (dispatch) {
-    var json = await axios.get("http://localhost:3001/recipes");
-
-    return dispatch({
-      type: GET_ALL_RECIPES,
-      payload: json.data,
-    });
+  return function (dispatch) {
+    return axios
+      .get("http://localhost:3001/recipes")
+      .then((response) => response.data)
+      .then((json) => {
+        dispatch({ type: GET_ALL_RECIPES, payload: json });
+      })
+      .catch((err) => {
+        dispatch({ type: GET_ALL_RECIPES, payload: err });
+      });
   };
+}
+
+//Receta por nombre
+export function getRecipeByName(name) {
+  try {
+    return async function (dispatch) {
+      var json = await axios.get(`http://localhost:3001/recipes?name=${name}`);
+
+      return dispatch({
+        type: GET_RECIPES_BY_NAME,
+        payload: json.data,
+      });
+    };
+  } catch (error) {
+    return error;
+  }
+}
+
+//Receta por id
+export function getRecipeDetail(id) {
+  try {
+    return async function (dispatch) {
+      var json = await axios.get(`http://localhost:3001/recipes/${id}`);
+
+      return dispatch({
+        type: GET_RECIPE_DETAIL,
+        payload: json.data,
+      });
+    };
+  } catch (error) {
+    return error;
+  }
+}
+//Post nueva receta
+export async function postNewRecipe(payload) {
+  try {
+    await axios.post("http://localhost:3001/recipes", payload);
+    return true;
+  } catch ({ message: error }) {
+    return false;
+  }
 }
 
 //Todas las dietas
@@ -31,22 +74,6 @@ export function getDiets() {
       payload: json.data,
     });
   };
-}
-
-//Receta por nombre
-export function getRecipeByName(name) {
-  try {
-    return async function (dispatch) {
-      var json = await axios.get(`http://localhost:3001/recipes?name=${name}`);
-      
-      return dispatch({
-        type: GET_RECIPES_BY_NAME,
-        payload: json.data,
-      });
-    };
-  } catch (error) {
-    return error;
-  }
 }
 
 //Filtrado por puntaje
@@ -74,30 +101,4 @@ export function orderByName(payload) {
     type: ORDER_BY_NAME,
     payload,
   };
-}
-
-//Post nueva receta
-export async function postNewRecipe(payload) {
-  try {
-    await axios.post("http://localhost:3001/recipes", payload);
-    return true;
-  } catch ({ message: error }) {
-    return false;
-  }
-}
-
-//detalle receta
-export function getRecipeDetail(id) {
-  try {
-    return async function (dispatch) {
-      var json = await axios.get(`http://localhost:3001/recipes/${id}`);
-
-      return dispatch({
-        type: GET_RECIPE_DETAIL,
-        payload: json.data,
-      });
-    };
-  } catch (error) {
-    return error;
-  }
 }

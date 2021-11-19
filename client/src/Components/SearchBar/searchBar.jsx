@@ -20,7 +20,6 @@ export default function SearchBar() {
   function handleClick(e) {
     e.preventDefault();
     dispatch(getAllRecipes());
-    console.log("despachado");
   }
 
   //on submit-->Le mando lo que esta en el estado

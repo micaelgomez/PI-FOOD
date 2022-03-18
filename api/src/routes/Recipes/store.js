@@ -29,7 +29,7 @@ async function getApiRecipe() {
 
     return apyRecipe1;
   } catch (error) {
-    next(error);
+    throw new Error(error);
   }
 }
 //-->BUSCA Todas las recetas de la db
@@ -42,7 +42,7 @@ async function getDbRecipe() {
     });
     // console.log(json);
   } catch (error) {
-    next(error);
+    throw new Error(error);
   }
 }
 // -->CONCATENO en un array infotal = [getApiRecipe,getDbrecipe]
@@ -55,7 +55,7 @@ async function getApiDbRecipe() {
 
     return totalInfo;
   } catch (error) {
-    next(error);
+    throw new Error(error);
   }
 }
 

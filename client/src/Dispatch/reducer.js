@@ -81,7 +81,7 @@ function rootReducer(state = initialState, { type, payload }) {
       console.log(allRecipes1);
 
       let dietsFiltered = dietsApi.concat(dietsDb);
-
+        
       return {
         ...state,
         recipes: dietsFiltered, // todas las recetas O receta que contenga dieta correcta.

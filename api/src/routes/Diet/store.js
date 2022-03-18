@@ -17,7 +17,7 @@ const diets = [
 //--> Funcion pre-cargadora
 async function preload() {
   const mapDiets = diets.forEach(async (element) => {
-    await Diet.findOrCreate({
+    await  newDiet.findOrCreate({
       where: { name: element },
     });
   });

@@ -1,12 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import "./index.css";
-import App from "./App"; 
+import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux"; //Para que funcione redux
-import store from "./Store"
-
+import store from "./Store";
+import { devToolsEnhancer } from "redux-devtools-extension";
+import dotenv from "dotenv";
+import axios from "axios";
+dotenv.config();
+axios.defaults.baseURL = process.env.REACT_APP_API || "http://localhost:3001";
 
 ReactDOM.render(
   <Provider store={store}>

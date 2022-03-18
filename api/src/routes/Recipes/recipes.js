@@ -5,7 +5,7 @@ const { getApiDbRecipe, postRecipe, getRecipesById } = require("./store");
 //  GET
 //       -->/recipes?name="..." ->Listado de nombre de Recipes
 //       -->/recipes            ->Lisado de todas las Recipes
-router.get("/", async (req, res, next) => {
+router.get("/", async (req, res) => {
   let name = req.query.name;
 
   try {

@@ -34,26 +34,26 @@ async function getApiRecipe() {
 }
 //-->BUSCA Todas las recetas de la db
 async function getDbRecipe() {
-  try {
+  // try {
     return await Recipe.findAll({
       include: {
         model: Diet,
       },
     });
     // console.log(json);
-  } catch (error) {
-    throw new Error(error);
-  }
+  // } catch (error) {
+  //   throw new Error(error);
+  // }
 }
 // -->CONCATENO en un array infotal = [getApiRecipe,getDbrecipe]
 async function getApiDbRecipe() {
   // try {
-    let apiInfo = await getApiRecipe();
-    // let dbInfo = await getDbRecipe();
+    // let apiInfo = await getApiRecipe();
+    let dbInfo = await getDbRecipe();
 
     // let totalInfo = apiInfo.concat(dbInfo);
 
-    return apiInfo;
+    return dbInfo;
   // } catch (error) {
   //   throw new Error(error);
   // }

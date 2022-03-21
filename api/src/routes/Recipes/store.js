@@ -47,16 +47,16 @@ async function getDbRecipe() {
 }
 // -->CONCATENO en un array infotal = [getApiRecipe,getDbrecipe]
 async function getApiDbRecipe() {
-  try {
+  // try {
     let apiInfo = await getApiRecipe();
     // let dbInfo = await getDbRecipe();
 
     // let totalInfo = apiInfo.concat(dbInfo);
 
     return apiInfo;
-  } catch (error) {
-    throw new Error(error);
-  }
+  // } catch (error) {
+  //   throw new Error(error);
+  // }
 }
 
 //--> BUSCA POR ID

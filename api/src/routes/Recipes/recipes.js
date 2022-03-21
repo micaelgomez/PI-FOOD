@@ -8,9 +8,9 @@ const { getApiDbRecipe, postRecipe, getRecipesById } = require("./store");
 router.get("/", async (req, res) => {
   let name = req.query.name;
 
-  try {
+  // try {
     let totalRecipes = await getApiDbRecipe();
-    
+
     if (name) { 
       //Si hay nombre-->
       let recipesName = await totalRecipes.filter((element) =>
@@ -23,9 +23,9 @@ router.get("/", async (req, res) => {
       //Envia todas las recetas
       res.status(200).send(totalRecipes);
     }
-  } catch (error) {
-    res.status(404).send("no funciona");
-  }
+  // } catch (error) {
+  //   res.status(404).send("no funciona");
+  // }
 });
 
 //  GET

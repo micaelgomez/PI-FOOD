@@ -4,10 +4,11 @@ const axios = require("axios").default;
 
 //-->BUSCA todas las recetas de la api
 async function getApiRecipe() {
-  // try {
+  try {
     const apyRecipe = await axios.get(
-      `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&&addRecipeInformation=true&number=30`
+      `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY_2}&&addRecipeInformation=true&number=30`
     );
+    
     const apyRecipe1 = await apyRecipe.data.results.map((element) => {
       return {
         vegetarian: element.vegetarian,
@@ -28,9 +29,9 @@ async function getApiRecipe() {
     });
 
     return apyRecipe1;
-  // } catch (error) {
-  //   throw new Error(error);
-  // }
+  } catch (error) {
+    throw new Error(error);
+  }
 }
 //-->BUSCA Todas las recetas de la db
 async function getDbRecipe() {
@@ -47,16 +48,16 @@ async function getDbRecipe() {
 }
 // -->CONCATENO en un array infotal = [getApiRecipe,getDbrecipe]
 async function getApiDbRecipe() {
-  // try {
-    // let apiInfo = await getApiRecipe();
+  try {
+    let apiInfo = await getApiRecipe();
     let dbInfo = await getDbRecipe();
 
-    // let totalInfo = apiInfo.concat(dbInfo);
+    let totalInfo = apiInfo.concat(dbInfo);
 
-    return dbInfo;
-  // } catch (error) {
-  //   throw new Error(error);
-  // }
+    return totalInfo;
+  } catch (error) {
+    throw new Error(error);
+  }
 }
 
 //--> BUSCA POR ID

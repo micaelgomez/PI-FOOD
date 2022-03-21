@@ -10,8 +10,8 @@ router.get("/", async (req, res) => {
 
   try {
     let totalRecipes = await getApiDbRecipe();
-
-    if (name) {
+    
+    if (name) { 
       //Si hay nombre-->
       let recipesName = await totalRecipes.filter((element) =>
         element.name.toLowerCase().includes(name.toLowerCase())

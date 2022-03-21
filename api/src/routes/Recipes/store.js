@@ -49,11 +49,11 @@ async function getDbRecipe() {
 async function getApiDbRecipe() {
   try {
     let apiInfo = await getApiRecipe();
-    let dbInfo = await getDbRecipe();
+    // let dbInfo = await getDbRecipe();
 
-    let totalInfo = apiInfo.concat(dbInfo);
+    // let totalInfo = apiInfo.concat(dbInfo);
 
-    return totalInfo;
+    return apiInfo;
   } catch (error) {
     throw new Error(error);
   }

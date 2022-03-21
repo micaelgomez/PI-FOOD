@@ -24,7 +24,7 @@ router.get("/", async (req, res) => {
       res.status(200).send(totalRecipes);
     }
   } catch (error) {
-    throw new Error(error);
+    res.status(404).send("no funciona");
   }
 });
 

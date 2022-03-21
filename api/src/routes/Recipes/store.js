@@ -4,7 +4,7 @@ const axios = require("axios").default;
 
 //-->BUSCA todas las recetas de la api
 async function getApiRecipe() {
-  try {
+  // try {
     const apyRecipe = await axios.get(
       `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&&addRecipeInformation=true&number=30`
     );
@@ -28,9 +28,9 @@ async function getApiRecipe() {
     });
 
     return apyRecipe1;
-  } catch (error) {
-    throw new Error(error);
-  }
+  // } catch (error) {
+  //   throw new Error(error);
+  // }
 }
 //-->BUSCA Todas las recetas de la db
 async function getDbRecipe() {
